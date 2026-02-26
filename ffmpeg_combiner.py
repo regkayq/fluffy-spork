@@ -82,7 +82,7 @@ class FFmpegCombinerApp(tk.Tk):
     def _pick_video(self):
         path = filedialog.askopenfilename(
             title="Select video file",
-            filetypes=[("Video / media files", "*.mp4 *.mkv *.webm *.ts *.avi *.mov *.flv *.m4v"), ("All files", "*.*")],
+            filetypes=[("All files", "*.*"), ("Video / media files", "*.mp4 *.mkv *.webm *.ts *.avi *.mov *.flv *.m4v")],
         )
         if path:
             self.video_var.set(path)
@@ -91,7 +91,7 @@ class FFmpegCombinerApp(tk.Tk):
     def _pick_audio(self):
         path = filedialog.askopenfilename(
             title="Select audio file",
-            filetypes=[("Audio / media files", "*.m4a *.aac *.mp3 *.opus *.ogg *.wav *.webm *.ts"), ("All files", "*.*")],
+            filetypes=[("All files", "*.*"), ("Audio / media files", "*.m4a *.aac *.mp3 *.opus *.ogg *.wav *.webm *.ts")],
         )
         if path:
             self.audio_var.set(path)
